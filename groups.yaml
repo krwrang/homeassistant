@@ -1,0 +1,76 @@
+default_view:
+  view: yes
+  name: Koti
+  entities:
+    - group.lights
+    - group.scenes
+#    - group.outlets
+#    - group.outside
+    - group.wrang
+
+media:
+  view: yes
+  entities:
+    - media_player.olohuone
+    - media_player.olohuone_2
+    - media_player.vaulaplay
+
+automations:
+  view: yes
+  name: Automaatiot
+  entities:
+    - automation.weekday_morning_lights
+    - automation.weekday_morning_wakeup
+    - automation.coming_home
+    - automation.away
+    - automation.light_notify
+
+lights:
+  name: Valot
+  entities:
+    - light.eteinen
+    - light.keittio
+    - light.olohuone
+    - light.makuuhuone
+    - light.tyohuone
+    - group.kaytava
+
+scenes:
+  name: Skenet
+  entities:
+    - scene.siivous
+    - scene.siivous_ohi
+
+#outlets:
+#  name: Töpselit
+#  entities:
+#    - switch.living_room_speakers
+
+#outside:
+#  name: Ulko
+#  entities:
+#    - sensor.outside_temp
+#    - sensor.outside_humid
+
+homecoming:
+  entities:
+    - light.eteinen
+
+morning_lights:
+  entities:
+    - light.keittio
+    - light.olohuone
+    - group.kaytava
+
+kaytava:
+  name: Käytävä
+  entities:
+    - light.kaytava
+    - light.kaytava_wc
+    - light.kaytava_kaapit
+
+wrang:
+  name: Tila
+  entities:
+    - device_tracker.oneplus_2
+    - device_tracker.oneplus_3t

@@ -1,0 +1,80 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 2
+  unit_system: metric
+  time_zone: Europe/Helsinki
+  customize: !include customize.yaml
+
+#mqtt:
+#  broker: 127.0.0.1
+#  port: 1883
+#  client_id: home-assistant-1
+#  username: mosquitto
+#  password: 
+
+frontend:
+
+config:
+
+logger:
+  default: warn
+
+recorder:
+  db_url: !secret mysql
+  purge_interval: 2
+  purge_keep_days: 5
+
+http:
+  api_password: !secret http_password
+
+# Discover some devices automatically
+#discovery:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Device tracking
+device_tracker:
+  - platform: unifi
+    host: 127.0.0.1
+    verify_ssl: false
+    username: !secret unifi_user
+    password: !secret unifi_password
+
+tradfri:
+  host: 192.168.1.20
+  allow_tradfri_groups: false
+
+media_player:
+  - platform: sonos
+    hosts:
+     - 192.168.1.30
+
+notify:
+  - name: email
+    platform: smtp
+    server: !secret smtp_server
+    port: 587
+    timeout: 15
+    sender: !secret smtp_sender
+    encryption: starttls
+    username: !secret smtp_sender
+    password: !secret smtp_password
+    recipient:
+      - !secret smtp_receiver1
+    sender_name: Home Assistant
+
+switch: !include switches.yaml
+light: !include lights.yaml
+group: !include groups.yaml
+automation: !include_dir_merge_list automation
+sensor: !include sensors.yaml
+scene: !include_dir_merge_list scene

@@ -1,0 +1,13 @@
+#outside_temp:
+#- platform: mqtt
+#  state_topic: 'home/sensors/outside'
+#  name: 'Outside temp'
+#  unit_of_measurement: '°C'
+#  value_template: '{{ value_json.Temperature }}'
+
+#outside_humid:
+#- platform: mqtt
+#  state_topic: 'home/sensors/outside'
+#  name: 'Outside humid'
+#  unit_of_measurement: '%'
+#  value_template: '{{ value_json.Humidity }}'

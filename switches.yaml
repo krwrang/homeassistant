@@ -1,0 +1,7 @@
+#- platform: mqtt
+#  name: "Living room speakers"
+#  command_topic: "home/commands/cotech"
+#  payload_on: "6634156|6387052|6571036|7052380"
+#  payload_off: "6930620|7217452|7081596|6871180"
+  #payload_on: "6387052|7052380|6634156|6571036"
+  #payload_off: "7217452|6871180|6930620|7081596"

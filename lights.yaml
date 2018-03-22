@@ -1,0 +1,20 @@
+#- platform: mqtt
+#  name: "Living room Ikeas"
+#  command_topic: "home/commands/cotech"
+#  payload_on: "6428421|6532917|6771701|7010021"
+#  payload_off: "7179733|6349381|6732181|7302085"
+#- platform: mqtt
+#  name: "Hall owl"
+#  command_topic: "home/commands/cotech"
+#  payload_on: "7081598|7217454|6871182|6930622"
+#  payload_off: "6634158|6387054|6571038|7052382"
+#- platform: mqtt
+#  name: "Living room reading"
+#  command_topic: "home/commands/cotech"
+#  payload_on: "6349383|6732183|7179735|7302087"
+#  payload_off: "6771703|7010023|6428423|6532919"
+#- platform: mqtt
+#  name: "Kitchen flower table"
+#  command_topic: "home/commands/cotech"
+#  payload_on: "12546076|11596636|12249004|11668332"
+#  payload_off: "12180860|12290092|12009868|11871420"

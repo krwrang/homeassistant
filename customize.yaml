@@ -1,0 +1,24 @@
+switch.living_room_speakers:
+  friendly_name: Kaiuttimet
+light.living_room_ikeas:
+  friendly_name: Ikeavalot
+light.hall_owl:
+  friendly_name: Pöllövalo
+light.living_room_reading:
+  friendly_name: Lukuvalo
+light.kitchen_flower_table:
+  friendly_name: Kukkavalo
+group.homecoming:
+  control: hidden
+sensor.outside_temp:
+  friendly_name: Lämpötila
+sensor.outside_humid:
+  friendly_name: Kosteus
+media_player.olohuone:
+  friendly_name: Sonos Connect
+media_player.olohuone_2:
+  friendly_name: Chromecast Olohuone
+media_player.vaulaplay:
+  friendly_name: Sonos Play:1
+automation.light_notify:
+  friendly_name: Lights on notification while away
