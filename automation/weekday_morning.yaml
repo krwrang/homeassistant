@@ -1,0 +1,38 @@
+- id: weekday_morning_lights
+  alias: "Weekday morning lights"
+  trigger:
+    platform: time
+    at: "06:33:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.morning_lights
+        brightness: 100
+        transition: 120
+- id: weekday_morning_wakeup
+  alias: "Weekday morning wake-up"
+  trigger:
+    platform: time
+    at: "06:45:00"
+  condition:
+  - condition: time
+    weekday:
+     - mon
+     - tue
+     - wed
+     - thu
+     - fri
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.makuuhuone
+        brightness: 100
+        transition: 120

@@ -1,0 +1,17 @@
+- id: light_notify
+  alias: "light_notify"
+  trigger:
+    platform: state
+    entity_id: group.all_lights
+    to: 'on'
+    for:
+      minutes: 10
+  condition:
+    - condition: state
+      entity_id: group.wrang
+      state: 'not_home'
+  action:
+    service: notify.email
+    data:
+      title: 'Valot päällä'
+      message: 'Sulla on kotona valot päällä vaikka presenssiä ei näy.'
