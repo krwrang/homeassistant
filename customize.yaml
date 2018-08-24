@@ -22,3 +22,5 @@ media_player.vaulaplay:
   friendly_name: Sonos Play:1
 automation.light_notify:
   friendly_name: Lights on notification while away
+binary_sensor.motion_hall:
+  friendly_name: Liike, eteinen

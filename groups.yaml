@@ -7,6 +7,7 @@ default_view:
 #    - group.outlets
 #    - group.outside
     - group.wrang
+    - group.sensors
 
 media:
   view: yes
@@ -41,6 +42,11 @@ scenes:
     - scene.siivous
     - scene.siivous_ohi
 
+sensors:
+  name: Sensorit
+  entities:
+    - binary_sensor.motion_hall
+
 #outlets:
 #  name: Töpselit
 #  entities:
@@ -72,5 +78,4 @@ kaytava:
 wrang:
   name: Tila
   entities:
-    - device_tracker.oneplus_2
     - device_tracker.oneplus_3t

@@ -1,0 +1,9 @@
+- platform: mqtt
+  state_topic: 'home/OpenMQTTGateway/SRFBtoMQTT'
+  name: 'Motion Hall'
+  payload_on: '13739886'
+  payload_off: '13739886off'
+  device_class: Motion
+  optimistic: false
+  qos: 1
+  retain: false

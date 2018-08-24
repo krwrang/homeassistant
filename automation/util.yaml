@@ -1,0 +1,14 @@
+- alias: Reset RF Motion State
+  hide_entity: true
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_hall
+    to: 'on'
+    for:
+      seconds: 5
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/OpenMQTTGateway/SRFBtoMQTT
+      payload: 13739886off

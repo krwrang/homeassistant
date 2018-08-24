@@ -7,12 +7,11 @@ homeassistant:
   time_zone: Europe/Helsinki
   customize: !include customize.yaml
 
-#mqtt:
-#  broker: 127.0.0.1
-#  port: 1883
-#  client_id: home-assistant-1
-#  username: mosquitto
-#  password: 
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home_assistant
+  username: mosquitto
 
 frontend:
 
@@ -77,4 +76,5 @@ light: !include lights.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
 scene: !include_dir_merge_list scene
